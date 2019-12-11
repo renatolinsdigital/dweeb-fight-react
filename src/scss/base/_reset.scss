@@ -1,0 +1,110 @@
+/*
+================================
+Sass/CSS Reset by Renato Lins
+================================
+*/
+
+%clearFix {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// all elements
+%all-elements {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  text-decoration: none;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  @extend %all-elements;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+section {
+  @extend %clearFix;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  word-wrap: break-word;
+}
+
+input,
+textarea,
+button {
+  resize: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block; //Old IE reset
+}
+
+/*hack para imagens SVG no IE*/
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+select {
+  cursor: pointer;
+}

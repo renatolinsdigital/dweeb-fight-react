@@ -1,0 +1,83 @@
+/*-------------- Tablet ----------------*/
+
+@media only screen and (max-width: 1170px) {
+  .controls {
+    button {
+      font-size: 32px;
+    }
+    .message {
+      span {
+        font-size: 28px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .dweeb-container {
+    // min-width: 200px;
+    .dweeb-name {
+      font-size: 32px;
+    }
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .controls {
+    padding: 80px 15px 0 15px;
+    button {
+      padding: 25px 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .game-wrapper {
+    grid-template-columns: 1fr 100px 1fr;
+  }
+  .controls {
+    padding: 80px 10px 0 10px;
+    max-width: 100px;
+    button {
+      max-width: 100%;
+      font-size: 16px;
+      padding: 25px 10px;
+    }
+    .message {
+      span {
+        font-size: 16px;
+        white-space: normal;
+      }
+    }
+  }
+
+  .attributes-selection {
+    display: flex;
+    flex-direction: column;
+  }
+  span.life-label{
+    font-size: 5px;
+  }
+}
+
+/*-------------- Phone ----------------*/
+
+@media only screen and (max-width: 645px) {
+  .attributes-selection {
+    select {
+      font-size: 13px;
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .attributes-selection {
+    select {
+      font-size: 10px;
+      padding: 5px 3px;
+    }
+  }
+}
+
+@media only screen and (max-width: 320px) {
+}

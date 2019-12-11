@@ -1,0 +1,98 @@
+@import "../utilities/_grid";
+@import "../utilities/_colors";
+
+.game-wrapper {
+  @extend .container;
+  max-width: 1440px;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: 100%;
+}
+
+.dweeb-container,
+.controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dweeb-container {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 30px 0;
+  max-height: 800px;
+  background-color: $orange;
+  justify-content: flex-end;
+  .dweeb-name {
+    color: $white;
+    background: $wine;
+    font-size: 48px;
+    padding: 12px 15px;
+    width: 100%;
+    text-align: center;
+    margin: 0 0 auto 0;
+  }
+  .dweeb-image {
+    width: calc(100% - 30px);
+    height: auto;
+    max-height: 500px;
+    margin: auto 0 auto 0;
+  }
+}
+
+.attributes-selection {
+  padding: 5px;
+  display: grid;
+  width: 100%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 35% 65%;
+  select {
+    margin: 5px;
+    font-size: 18px;
+    padding: 7px 5px;
+    border-radius: 4px;
+  }
+}
+
+.controls {
+  justify-content: center;
+  align-items: center;
+  padding: 120px 40px 0 40px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  button {
+    background: $wine;
+    color: $white;
+    font-size: 32px;
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 30px;
+    padding: 40px 15px;
+    font-size: 48px;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    &:hover {
+      color: $white;
+      background: lighten($wine, 8%);
+    }
+  }
+
+  .message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    span {
+      display: flex;
+      text-align: center;
+      color: darken($wine, 40%);
+      font-size: 32px;
+      white-space: pre;
+      &:last-of-type {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
