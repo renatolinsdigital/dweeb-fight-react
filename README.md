@@ -9,7 +9,7 @@
 
  # Playing
 
-This game basically put two characters to fight based on their level and attributes. All attributes are open for changing, so that you can see what happens. 
+This game basically puts two characters to fight, based on their level and attributes. All attributes are open for changing, so you can see what happens. 
 
 Enjoy!
 
