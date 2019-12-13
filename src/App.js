@@ -64,17 +64,14 @@ class App extends Component {
   };
 
   getActionStyle(dweeb) {
-    switch (true) {
-      case dweeb.life > 0: {
-        return {
-          backgroundColor: dweeb.hurted ? "red" : "#f7931e"
-        };
-      }
-      default:
-        return {
-          backgroundColor: "gray"
-        };
+    if (dweeb.life > 0) {
+      return {
+        backgroundColor: dweeb.hurted ? "red" : "#f7931e"
+      };
     }
+    return {
+      backgroundColor: "gray"
+    };
   }
 
   render() {

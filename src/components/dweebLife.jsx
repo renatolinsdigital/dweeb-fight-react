@@ -5,33 +5,19 @@ class DweebLife extends Component {
   getLifeBarStyle = (life, totalLife) => {
     let lifePercentage = (life / totalLife) * 100;
     if (lifePercentage.isNaN) lifePercentage = 0;
-    let lifeColor = "gray";
 
-    switch (true) {
-      case lifePercentage <= 10: {
-        lifeColor = "#d42300";
-        break;
-      }
-      case lifePercentage <= 20: {
-        lifeColor = "#e76802";
-        break;
-      }
-      case lifePercentage <= 30: {
-        lifeColor = "#e4ff00";
-        break;
-      }
-      case lifePercentage <= 50: {
-        lifeColor = "#5ba603";
-        break;
-      }
-      case lifePercentage <= 100: {
-        lifeColor = "#008000";
-        break;
-      }
-      default: {
-        lifeColor = "gray";
-      }
-    }
+    let lifeColor =
+      lifePercentage <= 10
+        ? "#d42300"
+        : lifePercentage <= 20
+        ? "#e76802"
+        : lifePercentage <= 30
+        ? "#e4ff00"
+        : lifePercentage <= 50
+        ? "#5ba603"
+        : lifePercentage <= 100
+        ? "#008000"
+        : "gray";
 
     return {
       display: "flex",
@@ -79,4 +65,3 @@ DweebLife.propTypes = {
 };
 
 export default DweebLife;
-
