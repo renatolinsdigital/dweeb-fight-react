@@ -35,6 +35,7 @@ class AboutModal extends Component {
               DWEEB FIGHT by
             </p>
             <img src={logo} alt="Renato Lins Logo" style={getLogoStyle()} />
+            <p>How to play: Just click FIGHT and see dweebs fighting!</p>
             <p>Developed with React + Redux by Renato Lins</p>
           </div>
         </div>
