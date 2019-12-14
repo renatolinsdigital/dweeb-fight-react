@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { messageUpdate } from "../store/actions";
 import { NO_MESSAGE } from "../store/actionTypes";
+import ReactHtmlParser from "react-html-parser";
 
 class GameMessages extends Component {
   componentDidMount() {
@@ -10,16 +11,27 @@ class GameMessages extends Component {
   }
 
   render() {
-    return <div className="message">{<span>{this.props.messageText}</span>}</div>;
+    return (
+      <span style={this.getMessageStyle()}>
+        {ReactHtmlParser(this.props.messageTextOrHtml)}
+      </span>
+    );
+  }
+
+  getMessageStyle() {
+    return {
+      textAlign: "center",
+      fontSize: "calc( 14px + 1vw )"
+    };
   }
 }
 
 GameMessages.prototypes = {
-  message: PropTypes.string
+  messageTextOrHtml: PropTypes.oneOfType([PropTypes.string, PropTypes.element]),
 };
 
 const mapStateToProps = state => ({
-  messageText: state.message.text
+  messageTextOrHtml: state.message.messageTextOrHtml
 });
 
 export default connect(mapStateToProps, { messageUpdate })(GameMessages);

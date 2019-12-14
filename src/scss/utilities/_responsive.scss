@@ -5,11 +5,6 @@
     button {
       font-size: 32px;
     }
-    .message {
-      span {
-        font-size: 28px;
-      }
-    }
   }
 }
 
@@ -52,12 +47,6 @@
       font-size: 16px;
       padding: 25px 10px;
     }
-    .message {
-      span {
-        font-size: 18px;
-        white-space: normal;
-      }
-    }
   }
 
   span.life-label {
@@ -87,12 +76,6 @@
     button {
       padding: 15px 8px;
       min-height: 70px;
-    }
-  }
-
-  .message {
-    span {
-      font-size: 16px;
     }
   }
 }

@@ -11,7 +11,7 @@ const initialState = {
     isAboutModalVisible: false
   },
   message: {
-    text: ""
+    messageTextOrHtml: ""
   },
   dweebs: dweebs
 };
@@ -46,22 +46,22 @@ function messageReducer(state = initialState, action) {
     case "NO_MESSAGE":
       return {
         ...state,
-        text: ""
+        messageTextOrHtml: ""
       };
     case "GAME_STARTED_MESSAGE":
       return {
         ...state,
-        text: "Game Started"
+        messageTextOrHtml: "Game Started"
       };
     case "DWEEB_UPDATED_MESSAGE":
       return {
         ...state,
-        text: "Dweeb has been updated"
+        messageTextOrHtml: "Dweeb has been updated"
       };
     case "CUSTOM_MESSAGE":
       return {
         ...state,
-        text: action.text
+        messageTextOrHtml: action.messageTextOrHtml
       };
     default:
       return {

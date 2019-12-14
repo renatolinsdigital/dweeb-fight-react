@@ -85,11 +85,6 @@
     align-items: center;
 
     span {
-      display: flex;
-      text-align: center;
-      color: darken($wine, 40%);
-      font-size: 32px;
-      white-space: pre;
       &:last-of-type {
         margin-bottom: 30px;
       }
