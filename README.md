@@ -1,6 +1,6 @@
 # Dweeb Fight
 
- Fighting mini-game with open configuration. Demo: https://dweeb-fight.herokuapp.com
+ Fighting mini-game with open configuration. [Click here](https://dweeb-fight.herokuapp.com/?target=_blank) to see the demo.
 
 # Running
 
