@@ -35,9 +35,17 @@ class AboutModal extends Component {
               DWEEB FIGHT by
             </p>
             <img src={logo} alt="Renato Lins Logo" style={getLogoStyle()} />
-            <p>What it is: A fighting mini-game with open configuration</p>
-            <p>How to play: Just click FIGHT and see dweebs fighting!</p>
-            <p>Developed with React + Redux by Renato Lins</p>
+            <p style={{ marginTop: "15px" }}>
+              <span style={{ color: "#F7EC29" }}>What it is: </span>A fighting
+              mini-game with open configuration
+            </p>
+            <p>
+              <span style={{ color: "#F7EC29" }}>How to play: </span>Just click
+              FIGHT and see dweebs fighting!
+            </p>
+            <p style={{ color: "#EE2D30" }}>
+              Developed with React + Redux by Renato Lins
+            </p>
           </div>
         </div>
       </div>
@@ -116,7 +124,7 @@ function getModalBodyStyle() {
     fontSize: "22px",
     textAlign: "center",
     overflowY: "auto",
-    color: "white"
+    color: "#8D8D8D"
   };
 }
 

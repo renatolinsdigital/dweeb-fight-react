@@ -15,7 +15,7 @@
 
 @media only screen and (max-width: 900px) {
   .dweeb-container {
-     max-height: 580px;
+    max-height: 600px;
     .dweeb-name {
       font-size: 32px;
     }
@@ -27,6 +27,15 @@
     padding: 80px 15px 0 15px;
     button {
       padding: 25px 10px;
+    }
+  }
+  .attributes-selection {
+    display: flex;
+    flex-direction: column;
+  }
+  .attributes-selection {
+    select {
+      margin: 0 0 7px 0;
     }
   }
 }
@@ -45,17 +54,13 @@
     }
     .message {
       span {
-        font-size: 16px;
+        font-size: 18px;
         white-space: normal;
       }
     }
   }
 
-  .attributes-selection {
-    display: flex;
-    flex-direction: column;
-  }
-  span.life-label{
+  span.life-label {
     font-size: 5px;
   }
 }
@@ -63,21 +68,55 @@
 /*-------------- Phone ----------------*/
 
 @media only screen and (max-width: 645px) {
+  .game-wrapper {
+    grid-template-columns: 1fr 80px 1fr;
+    padding: 0 10px;
+  }
+  .dweeb-container {
+    .dweeb-name {
+      font-size: 24px;
+    }
+  }
   .attributes-selection {
     select {
       font-size: 13px;
     }
   }
+  .controls {
+    padding: 80px 5px 0 5px;
+    button {
+      padding: 15px 8px;
+      min-height: 70px;
+    }
+  }
+
+  .message {
+    span {
+      font-size: 16px;
+    }
+  }
 }
 
 @media only screen and (max-width: 390px) {
+  .dweeb-container {
+    .dweeb-name {
+      font-size: 18px;
+    }
+  }
+
+  .dweeb-container {
+    max-height: 420px;
+  }
   .attributes-selection {
     select {
       font-size: 10px;
       padding: 5px 3px;
+      margin: 0 0 5px 0;
     }
   }
 }
 
 @media only screen and (max-width: 320px) {
+  .attributes-selection {
+  }
 }
